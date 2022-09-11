@@ -1,8 +1,9 @@
 package au.edu.swin.sdmd.l05_detailedimages
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +15,9 @@ class MainActivity : AppCompatActivity() {
 
         val vStation = findViewById<TextView>(R.id.station)
         vStation.setOnClickListener {
-
+            val intent = Intent(this, DetailActivity::class.java).apply {}
+            intent.putExtra("name", station.name)
+            startActivity(intent)
         }
     }
 
