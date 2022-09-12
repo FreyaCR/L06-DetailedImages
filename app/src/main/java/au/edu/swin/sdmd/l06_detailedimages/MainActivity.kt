@@ -15,12 +15,9 @@ class MainActivity : AppCompatActivity() {
 
         val vStation = findViewById<TextView>(R.id.station)
         vStation.setOnClickListener {
-            //create intent for DetailActivity and put extras
+            //create intent for DetailActivity and put extra
             val intent = Intent(this, DetailActivity::class.java).apply {
-                putExtra("name", station.name) //string extra
-                putExtra("author", station.author)
-                putExtra("lat", station.latitude.toString()) //convert float values to string extras
-                putExtra("long", station.longitude.toString())
+                putExtra("location", station) //parcelable object extra
             }
             startActivity(intent)
         }

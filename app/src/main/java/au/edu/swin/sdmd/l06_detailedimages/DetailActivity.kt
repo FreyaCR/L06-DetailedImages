@@ -15,10 +15,15 @@ class DetailActivity : AppCompatActivity() {
         val vLatitude = findViewById<TextView>(R.id.latitude)
         val vLongitude = findViewById<TextView>(R.id.longitude)
 
-        //populate text views with data from intent extras
-        vName.text = intent.getStringExtra("name")
-        vAuthor.text = intent.getStringExtra("author")
-        vLatitude.text = intent.getStringExtra("lat")
-        vLongitude.text = intent.getStringExtra("long")
+        //get location object from intent
+        val location = intent.getParcelableExtra<Location>("location")
+
+        //populate text views with data location object
+        location?.let {
+            vName.text = it.name
+            vAuthor.text = it.author
+            vLatitude.text = it.latitude.toString()
+            vLongitude.text = it.longitude.toString()
+        }
     }
 }
