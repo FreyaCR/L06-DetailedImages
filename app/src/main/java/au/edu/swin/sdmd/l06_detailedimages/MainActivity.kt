@@ -1,4 +1,4 @@
-package au.edu.swin.sdmd.l05_detailedimages
+package au.edu.swin.sdmd.l06_detailedimages
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -15,8 +15,12 @@ class MainActivity : AppCompatActivity() {
 
         val vStation = findViewById<TextView>(R.id.station)
         vStation.setOnClickListener {
-            val intent = Intent(this, DetailActivity::class.java).apply {}
-            intent.putExtra("name", station.name)
+            val intent = Intent(this, DetailActivity::class.java).apply {
+                putExtra("name", station.name)
+                putExtra("author", station.author)
+                putExtra("lat", station.latitude)
+                putExtra("long", station.longitude)
+            }
             startActivity(intent)
         }
     }

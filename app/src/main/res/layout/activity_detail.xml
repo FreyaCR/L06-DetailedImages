@@ -7,10 +7,16 @@
     android:orientation="vertical"
     tools:context=".DetailActivity">
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5" />
+
     <TextView
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:gravity="center"
         android:text="TextView"
         android:textSize="24sp" />
@@ -19,6 +25,7 @@
         android:id="@+id/author"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:gravity="center"
         android:text="TextView"
         android:textSize="18sp" />
@@ -27,7 +34,7 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="20"
         android:contentDescription="station"
         app:srcCompat="@drawable/station" />
 
@@ -35,6 +42,7 @@
         android:id="@+id/visited"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:gravity="center"
         android:text="Visited?" />
 
@@ -42,14 +50,21 @@
         android:id="@+id/latitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:gravity="center"/>
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="TextView" />
 
     <TextView
         android:id="@+id/longitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:gravity="center"/>
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="TextView" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5" />
 
 </LinearLayout>

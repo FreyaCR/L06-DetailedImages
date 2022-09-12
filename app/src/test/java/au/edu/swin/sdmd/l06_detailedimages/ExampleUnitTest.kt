@@ -1,4 +1,4 @@
-package au.edu.swin.sdmd.l05_detailedimages
+package au.edu.swin.sdmd.l06_detailedimages
 
 import org.junit.Test
 
